@@ -1,0 +1,58 @@
+<!-- login.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/lr.css' %}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <center>
+        {% for x in messages %}
+
+            <h5> 
+                
+              <div id="myAlert" class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong style="color:red;">{{x}}</strong>
+                <button type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            
+            <script>
+                // Function to dismiss the alert after a specified duration
+                function dismissAlert() {
+                    var alertDiv = document.getElementById('myAlert');
+                    if (alertDiv) {
+                        alertDiv.classList.add('fade');
+                        setTimeout(function() {
+                            alertDiv.style.display = 'none';
+                        }, 3000); // Change 1000 to the desired duration in milliseconds (e.g., 3000 for 3 seconds)
+                    }
+                }
+            
+                // Automatically dismiss the alert after 3 seconds (adjust the time as needed)
+                setTimeout(dismissAlert, 1000); // 3000 milliseconds = 3 seconds
+            </script>
+            
+                                
+            </h5>
+
+            {% endfor %}
+        </center>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <button type="submit" value="submit" name="submit">Login</button>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* account_info.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.account-info {
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.account-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.account-info th, .account-info td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.account-info th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.account-info tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.account-info tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.account-info tbody td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,35 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Tracking</title>
+    <link rel="stylesheet" href="{% static 'css/tracking.css' %}">
+</head>
+<body>
+    <h1>Request Tracking</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Date Submitted</th>
+                <th>Date Resolved</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            {% for x in information  %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ x.status }}</td>
+                <td> {{ x.submit }} </td>
+                <td> {{ x.resolved_at }} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
