@@ -93,10 +93,7 @@ def update_record(request, id):
         info.resolved_at = timezone.now()
     else:
         info.resolved_at = None
-    
-    
-    
-    
+
     info.save()
     return HttpResponseRedirect('/customer-detail')
 

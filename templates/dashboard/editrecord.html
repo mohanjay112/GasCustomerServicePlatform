@@ -35,27 +35,18 @@
       rel="stylesheet"
     />
     <link href="{% static "dashboard/dist/css/style.min.css" %}" rel="stylesheet" />
-    <!-- HTML5 Shim and Respond.js" %} IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js" %} doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" %}"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js" %}/1.4.2/respond.min.js" %}"></script>
-    <![endif]-->
+    
   </head>
 
   <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
+
     <div class="preloader">
       <div class="lds-ripple">
         <div class="lds-pos"></div>
         <div class="lds-pos"></div>
       </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
+   
     <div
       id="main-wrapper"
       data-layout="vertical"
@@ -65,15 +56,11 @@
       data-header-position="absolute"
       data-boxed-layout="full"
     >
-      <!-- ============================================================== -->
-      <!-- Topbar header - style you can find in pages.scss -->
-      <!-- ============================================================== -->
+      
       <header class="topbar" data-navbarbg="skin5">
         <nav class="navbar top-navbar navbar-expand-md navbar-dark">
           <div class="navbar-header" data-logobg="skin5">
-            <!-- ============================================================== -->
-            <!-- Logo -->
-            <!-- ============================================================== -->
+   
             <a class="navbar-brand" href="index.html">
               <!-- Logo icon -->
              
@@ -454,172 +441,7 @@
           <!-- ============================================================== -->
           <div class="row">
             <div class="col-12">
-             <!-- <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title mb-0">Static Table</h5>
-                </div>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div> -->
-             <!-- <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title mb-0">Static Table With Checkboxes</h5>
-                </div>
-                <div class="table-responsive">
-                  <table class="table">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>
-                          <label class="customcheckbox mb-3">
-                            <input type="checkbox" id="mainCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <th scope="col">Rendering engine</th>
-                        <th scope="col">Browser</th>
-                        <th scope="col">Platform(s)</th>
-                        <th scope="col">Engine version</th>
-                      </tr>
-                    </thead>
-                    <tbody class="customtable">
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 4.0</td>
-                        <td>Win 95+</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.0</td>
-                        <td>Win 95+</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 5.5</td>
-                        <td>Win 95+</td>
-                        <td>5.5</td>
-                      </tr>
-                      <tr>
-                        <th>
-                          <label class="customcheckbox">
-                            <input type="checkbox" class="listCheckbox" />
-                            <span class="checkmark"></span>
-                          </label>
-                        </th>
-                        <td>Trident</td>
-                        <td>Internet Explorer 6</td>
-                        <td>Win 98+</td>
-                        <td>6</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>  -->
-             <!-- <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Collspan Table Example</h5>
-                </div>
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td colspan="2">Larry the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>   -->
+             
               
               {% for info in information %}
 
@@ -633,8 +455,7 @@
                       <form action="{% url 'update_record' info.id %}" method="POST" name="Edit_Form">
                         <input type="hidden" name ="id" id="id" value="{{info.id}}">
                         {% csrf_token %}
-                <!-- Cross-Site Request Forgery (CSRF) is an attack that forces authenticated users to submit a request to a Web application against which they are currently authenticated.
-                CSRF Token used to prevent unathorized person could not submit form from your website-->
+                
                         
                         <div class="form-group">
                           <label>Name:</label>
