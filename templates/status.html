@@ -14,6 +14,8 @@
         <thead>
             <tr>
                 <th>ID</th>
+                <th> Name </th>
+                <th> Request_Type </th>
                 <th>Status</th>
                 <th>Date Submitted</th>
                 <th>Date Resolved</th>
@@ -24,6 +26,8 @@
             {% for x in information  %}
             <tr>
                 <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ x.name }}</td>
+                <td>{{ x.request_type }} </td>
                 <td>{{ x.status }}</td>
                 <td> {{ x.submit }} </td>
                 <td> {{ x.resolved_at }} </td>
