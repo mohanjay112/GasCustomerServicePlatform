@@ -82,7 +82,27 @@ def edit_record(request, id):
     return render(request,'dashboard/editrecord.html', data)
 
 
+def update_record(request, id):
+    info = service_request.objects.get(pk=id)
     
+    info.name = request.POST.get('name')
+    info.status = request.POST.get('status')
+    info.phone = request.POST.get('phone')
+    info.details = request.POST.get('details')
+    if info.status == 'Resolved':
+        info.resolved_at = timezone.now()
+    else:
+        info.resolved_at = None
+    
+    
+    
+    
+    info.save()
+    return HttpResponseRedirect('/customer-detail')
+
+
 
     
 
+    
+ 
