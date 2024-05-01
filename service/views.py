@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.contrib.auth import login,logout,authenticate
 from django.utils import timezone
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
+
 
 
 
@@ -49,6 +51,7 @@ def login_user(request):
         
         if user is not None:
             login(request, user)
+            request.session['username'] = a
             return redirect('dashboard')
         else:
             messages.error(request,"You are write incorrect password")
@@ -58,12 +61,21 @@ def login_user(request):
     return render(request, 'login.html')
 
 
+@login_required(login_url='login')
 def dashboard(request):
-    return render(request,'dashboard/index.html')
+    
+    username = request.session.get('username')
+    
+    
+    return render(request,'dashboard/index.html',
+    {'username':username})
+
+    
 
 def user_info(request):
     return render(request, 'dashboard/tables.html')
 
+@login_required(login_url='login')
 def customer_details(request):
     info = service_request.objects.all()
     dict1 = {'information': info}
@@ -96,6 +108,11 @@ def update_record(request, id):
 
     info.save()
     return HttpResponseRedirect('/customer-detail')
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('/')
 
 
 

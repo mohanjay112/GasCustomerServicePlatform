@@ -261,7 +261,7 @@
                                     class="hide-menu">Customer support</span></a></li>
                         
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="{% url 'login' %}" aria-expanded="false"><i class="bi bi-box-arrow-right"></i><span
+                                href="{% url 'logout' %}" aria-expanded="false"><i class="bi bi-box-arrow-right"></i><span
                                     class="hide-menu">Logout</span></a></li>
                         
                         <ul>
@@ -332,7 +332,7 @@
                         <div class="card card-hover">
                             <div class="box bg-danger text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                                <h6 class="text-white"><a href="{% url 'login' %}" > logout </a></h6>
+                                <h6 class="text-white"><a href="{% url 'logout' %}" > logout </a></h6>
                             </div>
                         </div>
                     </div>
@@ -357,50 +357,16 @@
                                         
                                     </div>
                                     <div class="col-lg-3">
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-user mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">2540</h5>
-                                                    <small class="font-light">Total Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-plus mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">120</h5>
-                                                    <small class="font-light">New Users</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mt-3">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-cart-plus mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">656</h5>
-                                                    <small class="font-light">Total Shop</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mt-3">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-tag mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">9540</h5>
-                                                    <small class="font-light">Total Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mt-3">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-table mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">100</h5>
-                                                    <small class="font-light">Pending Orders</small>
-                                                </div>
-                                            </div>
-                                            <div class="col-6 mt-3">
-                                                <div class="bg-dark p-10 text-white text-center">
-                                                    <i class="fa fa-globe mb-1 font-16"></i>
-                                                    <h5 class="mb-0 mt-1">8540</h5>
-                                                    <small class="font-light">Online Orders</small>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <marquee direction="up" style="height:200px;color:green;"
+                                        onmouseover="this.stop()" onmouseout="this.start()" > 
+                                        {% if user.is_authenticated %}
+
+                                            <h3> Hello, {{ username }} </h3>
+
+                                        {% endif %}
+                                        <br><br> 
+                                        <b> Welcome To Customer Service Portals For Gas Utility </b>                                          
+                                        </marquee>
                                     </div>
                                     <!-- column -->
                                 </div>
@@ -408,7 +374,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- footer -->
